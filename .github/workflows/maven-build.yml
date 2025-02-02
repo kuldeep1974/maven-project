@@ -1,4 +1,4 @@
-name: Maven Build Workflow  # Name of the Workflow
+name: Maven Build Workflow
 
 # Trigger the workflow on push to the 'main' branch
 on:
@@ -13,7 +13,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3  # Use the latest version of checkout
+        uses: actions/checkout@v3
 
       # Step 2: Set up Java Development Kit (JDK)
       - name: Set up JDK 11
@@ -22,7 +22,11 @@ jobs:
           java-version: '11'  # Use Java 11
           distribution: 'zulu'  # Use Zulu OpenJDK
 
-      # Step 3: Run Maven commands sequentially
+      # Step 3: Navigate to the directory containing pom.xml
+      - name: Navigate to the correct directory
+        run: cd path/to/your/project  # Replace with the actual directory path
+
+      # Step 4: Run Maven commands sequentially
       - name: Run Maven Build Goals
         run: |
           mvn clean           # Clean the project
@@ -35,6 +39,6 @@ jobs:
           mvn deploy          # Deploy the artifact
           mvn site            # Generate the site
           
-      # Step 4: Display output after execution
+      # Step 5: Display output after execution
       - name: Display Maven Output
         run: echo "All 9 Maven goals have been executed!"
