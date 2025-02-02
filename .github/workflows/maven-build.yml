@@ -19,9 +19,6 @@ jobs:
           java-version: '11'
           distribution: 'zulu'
 
-      - name: Navigate to the project directory
-        run: cd pom.xml  # Replace 'project' with the correct directory
-
       - name: Run Maven Build Goals
         run: |
           mvn clean           # Clean the project
