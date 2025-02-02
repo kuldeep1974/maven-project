@@ -20,7 +20,7 @@ jobs:
           distribution: 'zulu'
 
       - name: Navigate to the project directory
-        run: cd project  # Replace 'project' with the correct directory
+        run: cd pom.xml  # Replace 'project' with the correct directory
 
       - name: Run Maven Build Goals
         run: |
