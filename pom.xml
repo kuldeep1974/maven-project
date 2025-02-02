@@ -35,13 +35,6 @@
     </snapshotRepository>
   </distributionManagement>
   
-  <!-- Servers: Authentication details -->
-  <servers>
-    <server>
-      <id>my-repo</id> <!-- The id must match the one in your pom.xml -->
-      <username>kuldeep1974</username>
-      <password>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</password> <!-- GitHub PAT -->
-    </server>
-  </servers>
+ 
   
 </project>
