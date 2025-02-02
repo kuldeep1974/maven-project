@@ -15,4 +15,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>my-repo</id>
+            <url>https://github.com/kuldeep1974/maven-project/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>my-snapshots</id>
+            <url>https://github.com/kuldeep1974/maven-project/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
