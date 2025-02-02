@@ -1,12 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
+  
+  <!-- Basic Project Information -->
   <groupId>com.pratical.app</groupId>
   <artifactId>pratical2</artifactId>
   <packaging>jar</packaging>
   <version>pratical2</version>
   <name>Maven Quick Start Archetype</name>
   <url>http://maven.apache.org</url>
+  
+  <!-- Dependencies -->
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,15 +22,26 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-    <distributionManagement>
-        <repository>
-            <id>my-repo</id>
-            <url>https://github.com/kuldeep1974/maven-project/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>my-snapshots</id>
-            <url>https://github.com/kuldeep1974/maven-project/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+  
+  <!-- Distribution Management: Repositories for Deployment -->
+  <distributionManagement>
+    <repository>
+      <id>my-repo</id>
+      <url>https://github.com/kuldeep1974/maven-project/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>my-snapshots</id>
+      <url>https://github.com/kuldeep1974/maven-project/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <!-- Servers: Authentication details -->
+  <servers>
+    <server>
+      <id>my-repo</id> <!-- The id must match the one in your pom.xml -->
+      <username>kuldeep1974</username>
+      <password>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</password> <!-- GitHub PAT -->
+    </server>
+  </servers>
+  
 </project>
