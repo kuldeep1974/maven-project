@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Use Java 11
-          distribution: 'adoptopenjdk'
+          distribution: 'adoptium'  # Use Adoptium (the successor to AdoptOpenJDK)
 
       # Step 3: Run Maven commands sequentially
       - name: Run Maven Build Goals
@@ -34,7 +34,7 @@ jobs:
           mvn install         # Install the artifact
           mvn deploy          # Deploy the artifact
           mvn site            # Generate the site
-
+          
       # Step 4: Display output after execution
       - name: Display Maven Output
         run: echo "All 9 Maven goals have been executed!"
